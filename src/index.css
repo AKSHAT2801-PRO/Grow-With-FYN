@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --yellow: #ffd21a;
+  --ink: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #111;
+  color: var(--yellow);
+}
+
+/* Chrome metallic text, mirrors the logo's bevelled steel letters */
+.chrome-text {
+  background-image: linear-gradient(
+    105deg,
+    #3a424a 0%,
+    #f4f7fa 18%,
+    #8c97a3 32%,
+    #ffffff 46%,
+    #5b6570 60%,
+    #dfe5eb 76%,
+    #2b3238 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #1b2026;
+  paint-order: stroke fill;
+  filter: drop-shadow(6px 8px 0 rgba(17, 17, 17, 0.35));
+}
+
+.chrome-shine {
+  animation: sweep 5s linear infinite;
+}
+
+.chrome-panel {
+  background: linear-gradient(145deg, #ffffff 0%, #c9d1d9 45%, #f4f7fa 70%, #9aa4af 100%);
+}
+
+.section-title {
+  font-family: "Archivo Black", Impact, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.eyebrow {
+  font-family: "Archivo", system-ui, sans-serif;
+  font-stretch: 125%;
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .eyebrow {
+    letter-spacing: 0.18em;
+    font-size: 0.65rem;
+  }
+
+  .chrome-text {
+    -webkit-text-stroke: 1px #1b2026;
+    filter: drop-shadow(2px 3px 0 rgba(17, 17, 17, 0.25));
+  }
+
+  .btn-pop {
+    box-shadow: 3px 3px 0 0 #111;
+  }
+
+  .chrome-panel {
+    background: linear-gradient(145deg, #ffffff 0%, #dfe5eb 40%, #f4f7fa 72%, #a1a9b3 100%);
+  }
+}
+
+.btn-pop {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 5px 5px 0 0 #111;
+}
+.btn-pop:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 0 #111;
+}
+.btn-pop:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 0 #111;
+}
+
+.dots-ink {
+  background-image: radial-gradient(rgba(255, 210, 26, 0.18) 2px, transparent 2px);
+  background-size: 34px 34px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chrome-shine,
+  .animate-marquee {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
