@@ -7,7 +7,7 @@ export const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 
 export const nav = [
   { label: "Partners", href: "#partners" },
-  { label: "Packages", href: "#packages" },
+  // { label: "Packages", href: "#packages" },
   { label: "Method", href: "#method" },
   { label: "About", href: "#about" },
 ];
