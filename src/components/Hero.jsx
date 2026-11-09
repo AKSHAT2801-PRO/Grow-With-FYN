@@ -179,12 +179,12 @@ export default function Hero() {
           >
             Chat on WhatsApp
           </a>
-          <a
+          {/* <a
             href="#packages"
             className="btn-pop eyebrow w-full max-w-[260px] border-[3px] border-fyn-ink bg-fyn-yellow px-8 py-[17px] sm:w-auto"
           >
             See packages
-          </a>
+          </a> */}
         </motion.div>
       </div>
 
